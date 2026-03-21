@@ -1,0 +1,800 @@
+INFO:     Started server process [52762]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54174 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54175 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54174 - "GET /styles.css HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:54176 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54174 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54177 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54175 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54183 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54183 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54184 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:54184 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54187 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54186 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54183 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54195 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54195 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54196 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:54198 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54197 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54196 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54195 - "GET /api/data HTTP/1.1" 200 OK
+Starting HOURLY pipeline at Sat Mar 21 01:00:00 CET 2026
+Fetching 2023-03-17 00:00:00+00:00 -> 2023-04-01 00:00:00+00:00
+Parsed 1440 rows
+Fetching 2023-04-01 00:00:00+00:00 -> 2023-05-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2023-05-01 00:00:00+00:00 -> 2023-06-01 00:00:00+00:00
+Traceback (most recent call last):
+  File "/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/01dataentso.py", line 164, in <module>
+    main()
+    ~~~~^^
+  File "/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/01dataentso.py", line 151, in main
+    xml_text = fetch_xml(chunk_start, chunk_end)
+  File "/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/01dataentso.py", line 55, in fetch_xml
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://web-api.tp.entsoe.eu/api?documentType=A65&processType=A16&outBiddingZone_Domain=10Y1001A1001A83F&periodStart=202305010000&periodEnd=202306010000&securityToken=cdb7d9f0-b902-4e55-8745-8f229d2d23a9
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/build_monitoring.py:29: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  actuals = pd.read_sql(actuals_query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/build_monitoring.py:30: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  forecasts = pd.read_sql(forecast_query, conn)
+No matching actuals and forecasts found to monitor. Run kaggle.py so predictions populate into history.
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/fct_alert.py:19: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+No anomalies detected. No alerts to generate.
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/hourly_agent.py:19: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+Simulated HOURLY Alert email dispatch to email@ocalkaptan.de
+Hourly pipeline complete.
+Running hourly tracking pipeline...
+INFO:     127.0.0.1:54236 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54236 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54237 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:54237 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:54239 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54238 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54236 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54251 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54251 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:54254 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54253 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:54251 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54252 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54262 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54262 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54263 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:54265 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54263 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54264 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54262 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54277 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54277 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54278 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:54280 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54279 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54278 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54277 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54325 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54326 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54325 - "GET /styles.css HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:54328 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54327 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54325 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54326 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:54334 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54336 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54337 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54335 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:54345 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54342 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54344 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54343 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54397 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54396 - "GET /styles.css HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:54399 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:54398 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54397 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54405 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54406 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:54406 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:54408 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54407 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54405 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54446 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54446 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54447 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:54448 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54447 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:54449 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54446 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:54482 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:54480 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54483 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54481 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54503 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54503 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54504 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:54504 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54505 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54506 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54503 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:54532 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54529 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54531 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54530 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54544 - "GET / HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:54546 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:54544 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54547 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54545 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54562 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54561 - "GET /styles.css HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:54561 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:54563 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54564 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:54562 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56127 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:56127 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:56129 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56130 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:56128 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57274 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:57274 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:57274 - "GET /app.js HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:57274 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:57276 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57277 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:57275 - "GET /api/data HTTP/1.1" 200 OK
+Run time of job "run_hourly_pipeline (trigger: cron[minute='0'], next run at: 2026-03-21 04:00:00 CET)" was missed by 0:41:59.899778
+INFO:     127.0.0.1:59075 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59076 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59075 - "GET /styles.css HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:59078 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59077 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:59075 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59076 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:59084 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59087 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59086 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59085 - "GET /api/data HTTP/1.1" 200 OK
+Run time of job "run_hourly_pipeline (trigger: cron[minute='0'], next run at: 2026-03-21 11:00:00 CET)" was missed by 0:28:17.386933
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:59135 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59132 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:59134 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59133 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:59171 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59168 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59170 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59169 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:59193 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59190 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:59192 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59191 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:59258 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59255 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:59257 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59256 - "GET /api/data HTTP/1.1" 200 OK
+Starting HOURLY pipeline at Sat Mar 21 11:00:00 CET 2026
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+Running hourly tracking pipeline...
+INFO:     127.0.0.1:59576 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59574 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:59577 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59575 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:59574 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59575 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59576 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59577 - "GET /api/data HTTP/1.1" 200 OK
+Fetching 2023-03-17 00:00:00+00:00 -> 2023-04-01 00:00:00+00:00
+Parsed 1440 rows
+Fetching 2023-04-01 00:00:00+00:00 -> 2023-05-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2023-05-01 00:00:00+00:00 -> 2023-06-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2023-06-01 00:00:00+00:00 -> 2023-07-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2023-07-01 00:00:00+00:00 -> 2023-08-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2023-08-01 00:00:00+00:00 -> 2023-09-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2023-09-01 00:00:00+00:00 -> 2023-10-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2023-10-01 00:00:00+00:00 -> 2023-11-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2023-11-01 00:00:00+00:00 -> 2023-12-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2023-12-01 00:00:00+00:00 -> 2024-01-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2024-01-01 00:00:00+00:00 -> 2024-02-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2024-02-01 00:00:00+00:00 -> 2024-03-01 00:00:00+00:00
+Parsed 2784 rows
+Fetching 2024-03-01 00:00:00+00:00 -> 2024-04-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2024-04-01 00:00:00+00:00 -> 2024-05-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2024-05-01 00:00:00+00:00 -> 2024-06-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2024-06-01 00:00:00+00:00 -> 2024-07-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2024-07-01 00:00:00+00:00 -> 2024-08-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2024-08-01 00:00:00+00:00 -> 2024-09-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2024-09-01 00:00:00+00:00 -> 2024-10-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2024-10-01 00:00:00+00:00 -> 2024-11-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2024-11-01 00:00:00+00:00 -> 2024-12-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2024-12-01 00:00:00+00:00 -> 2025-01-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2025-01-01 00:00:00+00:00 -> 2025-02-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2025-02-01 00:00:00+00:00 -> 2025-03-01 00:00:00+00:00
+Parsed 2688 rows
+Fetching 2025-03-01 00:00:00+00:00 -> 2025-04-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2025-04-01 00:00:00+00:00 -> 2025-05-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2025-05-01 00:00:00+00:00 -> 2025-06-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2025-06-01 00:00:00+00:00 -> 2025-07-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2025-07-01 00:00:00+00:00 -> 2025-08-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2025-08-01 00:00:00+00:00 -> 2025-09-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2025-09-01 00:00:00+00:00 -> 2025-10-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2025-10-01 00:00:00+00:00 -> 2025-11-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2025-11-01 00:00:00+00:00 -> 2025-12-01 00:00:00+00:00
+Parsed 2880 rows
+Fetching 2025-12-01 00:00:00+00:00 -> 2026-01-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2026-01-01 00:00:00+00:00 -> 2026-02-01 00:00:00+00:00
+Parsed 2976 rows
+Fetching 2026-02-01 00:00:00+00:00 -> 2026-03-01 00:00:00+00:00
+Parsed 2688 rows
+Fetching 2026-03-01 00:00:00+00:00 -> 2026-03-21 10:00:00.518698+00:00
+Parsed 1956 rows
+Done. Total parsed rows: 105636
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/build_monitoring.py:29: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  actuals = pd.read_sql(actuals_query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/build_monitoring.py:30: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  forecasts = pd.read_sql(forecast_query, conn)
+Inserted/Updated 11 monitored hours into fct_forecast_monitoring.
+Detected 11 anomalies in current monitoring window.
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/fct_alert.py:19: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+Generated 11 new alerts in fct_alerts.
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/hourly_agent.py:19: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+Simulated HOURLY Alert email dispatch to email@ocalkaptan.de
+Hourly pipeline complete.
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:59691 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:59694 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59693 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59692 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:59878 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59881 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59880 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:59879 - "GET /api/data HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60119 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60120 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60119 - "GET /styles.css HTTP/1.1" 304 Not Modified
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:60122 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60119 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60121 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60120 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:60151 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60153 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:60154 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60152 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:60163 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60161 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60164 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60162 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:60163 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60162 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60161 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60164 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+INFO:     127.0.0.1:60298 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60297 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:60295 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60296 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+INFO:     127.0.0.1:60402 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:60399 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60401 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60400 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:60499 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60496 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:60498 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60497 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+INFO:     127.0.0.1:60568 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60565 - "GET /api/summary HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+INFO:     127.0.0.1:60567 - "GET /api/alerts HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60566 - "GET /api/data HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_actuals = pd.read_sql("SELECT timestamp, demand_mw FROM hourly_demand_data ORDER BY timestamp DESC LIMIT 24", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:130: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 1", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:70: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_alerts = pd.read_sql("SELECT alert_id, timestampx, deviation, severity FROM fct_alerts ORDER BY alert_id DESC LIMIT 10", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:94: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+INFO:     127.0.0.1:60678 - "GET /api/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60680 - "GET /api/alerts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60681 - "GET /api/metrics HTTP/1.1" 200 OK
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:44: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_forecast = pd.read_sql("SELECT forecast_target_time, predicted_demand FROM fct_demand_forecast ORDER BY forecast_target_time DESC LIMIT 96", conn)
+/Users/ocalkaptan/Desktop/anomaly_detection/energy_env/webapp/main.py:51: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df_weather = pd.read_sql(weather_query, conn)
+INFO:     127.0.0.1:60679 - "GET /api/data HTTP/1.1" 200 OK

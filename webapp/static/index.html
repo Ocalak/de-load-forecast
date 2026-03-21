@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridOps Analytics | Premium Monitoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="logo">⚡ GridOps <span>Analytics</span></div>
+            <div class="status-badge"><span class="pulse"></span> System Online - Hourly Refresh Active</div>
+        </header>
+
+        <section class="metrics-container" id="metricsRow">
+            <div class="metric-card">
+                <h3>MAPE</h3>
+                <div class="metric-val" id="valMAPE">--%</div>
+                <div class="metric-sub">Mean Abs Percentage</div>
+            </div>
+            <div class="metric-card">
+                <h3>Bias</h3>
+                <div class="metric-val" id="valBIAS">--</div>
+                <div class="metric-sub">Systemic Avg Offset</div>
+            </div>
+            <div class="metric-card">
+                <h3>Peak Error</h3>
+                <div class="metric-val" id="valPEAK">--</div>
+                <div class="metric-sub">Max Target Miss (MW)</div>
+            </div>
+            <div class="metric-card">
+                <h3>RMSE</h3>
+                <div class="metric-val" id="valRMSE">--</div>
+                <div class="metric-sub">Root Mean Squared Error</div>
+            </div>
+            <div class="metric-card">
+                <h3>MAE</h3>
+                <div class="metric-val" id="valMAE">--</div>
+                <div class="metric-sub">Mean Absolute Error</div>
+            </div>
+            <div class="metric-card highlight-card">
+                <h3>Daily Energy</h3>
+                <div class="metric-val" id="valENERGY">--</div>
+                <div class="metric-sub">24h Generation (MWh)</div>
+            </div>
+        </section>
+
+        <section class="ai-summary-panel" style="margin-bottom: 2rem; padding: 1.5rem; background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 12px; border: 1px solid rgba(34, 211, 238, 0.4); box-shadow: 0 0 20px rgba(34,211,238, 0.1);">
+            <h3 style="color: #22d3ee; margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">🤖 LLM Operator Briefing</h3>
+            <p id="aiSummaryText" style="color: #e2e8f0; font-size: 1.05rem; line-height: 1.6; font-style: italic;">Fetching diagnostic telemetry...</p>
+        </section>
+
+        <section class="dashboard">
+            <div class="glass-panel chart-panel">
+                <h2>Demand vs Model Forecast</h2>
+                <div class="chart-wrapper" style="height: 350px;">
+                    <canvas id="demandChart"></canvas>
+                    <div id="liveDot" class="live-dot"></div>
+                </div>
+                <div class="chart-wrapper" style="height: 140px; margin-top: 1.5rem;">
+                    <canvas id="errorChart"></canvas>
+                </div>
+            </div>
+
+            <div class="side-container" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="glass-panel health-panel" style="padding: 1.5rem;">
+                    <h2 style="margin-bottom: 1rem;">Model Health Ops</h2>
+                    <div>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Feature Drift (Temperature)</span>
+                        <div style="color: #10b981; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;"><span class="pulse" style="background: #10b981; position: relative; display: inline-block;"></span> Stable (< 0.05 KL)</div>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Last Parameter Tuning</span>
+                        <div style="color: #e2e8f0; font-weight: bold;">Today, 10:00 AM</div>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Live Confidence R² Score</span>
+                        <div style="color: #38bdf8; font-weight: bold; font-size: 1.5rem;">94.2%</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel shap-panel" style="padding: 1.5rem;">
+                    <h2 style="margin-bottom: 1rem;">Global Feature Drivers</h2>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">XGBoost SHAP Value Explainability</div>
+                    
+                    <div class="feature-bar" style="margin-bottom: 0.8rem;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.2rem;"><span>Hour of Day (Lag 24)</span><span>35%</span></div>
+                        <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px;"><div style="width: 35%; background: #22d3ee; height: 100%; border-radius: 4px;"></div></div>
+                    </div>
+                    
+                    <div class="feature-bar" style="margin-bottom: 0.8rem;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.2rem;"><span>Temperature_Avg</span><span>28%</span></div>
+                        <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px;"><div style="width: 28%; background: #38bdf8; height: 100%; border-radius: 4px;"></div></div>
+                    </div>
+
+                    <div class="feature-bar" style="margin-bottom: 0.8rem;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.2rem;"><span>Day of Week</span><span>18%</span></div>
+                        <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px;"><div style="width: 18%; background: #818cf8; height: 100%; border-radius: 4px;"></div></div>
+                    </div>
+                    
+                    <div class="feature-bar">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.2rem;"><span>Is_Holiday</span><span>12%</span></div>
+                        <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px;"><div style="width: 12%; background: #a78bfa; height: 100%; border-radius: 4px;"></div></div>
+                    </div>
+                </div>
+
+                <div class="glass-panel alerts-panel" style="flex-grow: 1;">
+                    <h2>Latest Interventions</h2>
+                    <div id="alertsList" class="alerts-list">
+                        <p class="no-alerts">Loading telemetry...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Intelligent Energy Flow Monitoring • Powered by FastAPI & PostgreSQL</p>
+        </footer>
+    </main>
+
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
