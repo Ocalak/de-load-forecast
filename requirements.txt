@@ -142,3 +142,7 @@ lxml==6.0.2
 openmeteo-requests
 requests-cache
 retry-requests
+fastapi
+uvicorn
+apscheduler
+python-dotenv

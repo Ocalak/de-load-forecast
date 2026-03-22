@@ -1,6 +1,7 @@
 #!/bin/bash
 # run_hourly_pipeline.sh
 # This script runs the lightweight hourly updates without retraining the global forecast model
+cd "$(dirname "$0")"
 echo "Starting HOURLY pipeline at $(date)"
 python3 01dataentso.py
 python3 03avg_demad.py

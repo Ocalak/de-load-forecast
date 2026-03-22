@@ -2,7 +2,7 @@
 # run_daily_pipeline.sh
 # Add to crontab via: 0 10 * * * /Users/ocalkaptan/Desktop/anomaly_detection/energy_env/run_daily_pipeline.sh
 
-cd /Users/ocalkaptan/Desktop/anomaly_detection/energy_env
+cd "$(dirname "$0")"
 
 echo "=================================="
 echo "Starting daily pipeline at $(date)"
