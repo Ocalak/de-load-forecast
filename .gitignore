@@ -8,3 +8,9 @@ share/
 pyvenv.cfg
 .cache.sqlite
 .DS_Store
+
+# Logs, notebooks and generated files
+*.log
+.ipynb_checkpoints/
+etc/
+*.pdf
