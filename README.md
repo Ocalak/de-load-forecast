@@ -1,6 +1,6 @@
 # GridOps: Electrical Load Forecasting & Anomaly Detection
 
-![Dashboard Demo](dashboard_demo.webp)
+![Dashboard Demo](docs/dashboard_demo.webp)
 
 GridOps is an end-to-end Machine Learning pipeline and interactive FastAPI dashboard designed to forecast short-term electricity demand and detect grid anomalies in real-time. By leveraging multivariate weather data and dynamic model selection, the platform provides actionable, highly accurate predictions to optimize generations scheduling and improve grid stability.
 
@@ -26,14 +26,21 @@ GridOps is an end-to-end Machine Learning pipeline and interactive FastAPI dashb
 .
 ├── webapp/                 # FastAPI application, frontend static files, and APScheduler
 │   ├── main.py             # Entry point for the Dashboard & Task Scheduler
-│   ├── static/             # HTML, CSS, JS for the UI
+│   └── static/             # HTML, CSS, JS for the UI
+├── 01dataentso.py          # Fetches grid demand data from ENTSO-E
+├── 02dwd.py                # Fetches weather data from DWD
+├── 03avg_demad.py          # Aggregates the demand data
 ├── kaggle.py               # Main pipeline: Generates 24h predictions & selects best model
 ├── train_forecast.py       # Benchmarking script for evaluating multiple models
 ├── build_monitoring.py     # Hourly pipeline tracking actual demand vs forecast
 ├── fct_alert.py            # Automated severity calculation and LLM bridging
+├── agent.py                # Daily AI agent alert dispatcher
+├── hourly_agent.py         # Hourly AI agent alert dispatcher
+├── docs/                   # README assets (dashboard screenshot)
 ├── render.yaml             # Render Blueprint for automated cloud deployment
 ├── requirements.txt        # Python dependencies
-└── *.sh                    # Bash scripts to execute Python workflows
+├── run_daily_pipeline.sh   # Daily workflow: fetch, forecast, monitor, alert
+└── run_hourly_pipeline.sh  # Hourly workflow: update monitoring and alerts
 ```
 
 ---

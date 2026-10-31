@@ -1,6 +1,6 @@
 #!/bin/bash
 # run_daily_pipeline.sh
-# Add to crontab via: 0 10 * * * /Users/ocalkaptan/Desktop/anomaly_detection/energy_env/run_daily_pipeline.sh
+# Add to crontab via: 0 10 * * * /path/to/de-load-forecast/run_daily_pipeline.sh
 
 cd "$(dirname "$0")"
 
